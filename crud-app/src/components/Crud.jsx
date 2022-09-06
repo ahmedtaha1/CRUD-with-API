@@ -11,7 +11,7 @@ function Crud() {
   const [updatedTitle, setUpdatedTitle] = useState("");
   //read
   const fetchEmployees = async () => {
-    const res = await axios.get("http://localhost:3006/employees");
+    const res = await axios.get("https://jsonplaceholder.typicode.com/users");
     return res.data;
   };
   useEffect(() => {
@@ -23,16 +23,16 @@ function Crud() {
   }, []);
   //create
   const addEmployee = async (name, title) => {
-    const res = await axios.post("http://localhost:3006/employees", {
+    const res = await axios.post("https://jsonplaceholder.typicode.com/users", {
       id: employees.length + 1,
       name: name,
-      title: title,
+      username: title,
     });
     setEmployees([...employees, res.data]);
   };
   //delete
   const deleteEmployee = async (id) => {
-    await axios.delete(`http://localhost:3006/employees/${id}`);
+    await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
     const filteredEmployees = employees.filter((employee) => {
       return employee.id !== id;
     });
@@ -40,10 +40,13 @@ function Crud() {
   };
   //update
   const updateEmployee = async (id) => {
-    const res = await axios.put(`http://localhost:3006/employees/${id}`, {
-      name: updatedName,
-      title: updatedTitle,
-    });
+    const res = await axios.put(
+      `https://jsonplaceholder.typicode.com/users/${id}`,
+      {
+        name: updatedName,
+        username: updatedTitle,
+      }
+    );
     setEmployees(
       employees.map((employee) => {
         return employee.id === id ? { ...res.data } : employee;
@@ -65,7 +68,7 @@ function Crud() {
             key={employee.id}
           >
             <h2 className="mb-3 text-lg font-bold">{employee.name} </h2>
-            <h3 className="text-gray-500 mb-3">{employee.title} </h3>
+            <h3 className="text-gray-500 mb-3">{employee.username} </h3>
             <button
               className="rounded-full inline-block px-12 py-2 mx-2 font-semibold  bg-red-600 text-white mb-3"
               onClick={() => deleteEmployee(employee.id)}
