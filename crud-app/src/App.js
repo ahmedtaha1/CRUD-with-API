@@ -11,7 +11,7 @@ function App() {
       {signed && <Crud />}
       <footer className="p-3 mt-3 text-white bg-blue">
         <p className="font-bold text-2xl">
-          Coded With Love By <br /> Ahmed Taha
+          Coded With Love By <br /> ahmedTaha
           <AiFillHeart className="ml-1 inline-block align-middle text-3xl " />
         </p>
       </footer>
