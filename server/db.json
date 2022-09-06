@@ -1,0 +1,39 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "ENG.MOUSTAFA EL-NAKEEP",
+      "title": "Managing Director"
+    },
+    {
+      "id": "2",
+      "name": "ENG.SHADY RASLAN",
+      "title": "Business Director"
+    },
+    {
+      "id": "3",
+      "name": "DR. AMR ELKHOLY",
+      "title": "Project Manager"
+    },
+    {
+      "id": "4",
+      "name": "ENG.OSAMA EL-NAKEEP",
+      "title": "Accountant"
+    },
+    {
+      "id": "5",
+      "name": "ENG.EMAN AHMED",
+      "title": "HR Manager"
+    },
+    {
+      "id": "6",
+      "name": "ENG.MOHAMED ADEL",
+      "title": "Full-stack Developer"
+    },
+    {
+      "id": "7",
+      "name": "ENG.AHMED TAHA",
+      "title": "Front-end Developer"
+    }
+  ]
+}
